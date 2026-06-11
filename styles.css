@@ -57,13 +57,33 @@ align-items:stretch;
 /* FIXED FOR IPAD + SAFARI */
 
 .card{
-width:100%;
-aspect-ratio:63/88;
-min-height:180px;
-perspective:1200px;
--webkit-perspective:1200px;
-cursor:pointer;
-min-width:0;
+  width:100%;
+  height:320px;
+  perspective:1200px;
+  -webkit-perspective:1200px;
+  cursor:pointer;
+  min-width:0;
+}
+
+@media (max-width:1100px){
+  .grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .card{
+    height:300px;
+  }
+}
+
+@media (max-width:700px){
+  .grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+  }
+
+  .card{
+    height:240px;
+  }
 }
 
 .card-inner{
@@ -225,31 +245,6 @@ font-size:clamp(1rem,1.7vw,1.75rem);
 text-shadow:0 2px 0 #000;
 }
 
-@media (max-width:1100px){
-.grid{
-grid-template-columns:repeat(4,1fr);
-}
-}
-
-@media (max-width:700px){
-
-.grid{
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-}
-
-.page{
-padding:18px 10px;
-}
-
-.face{
-border-width:3px;
-}
-
-.name{
-font-size:clamp(.95rem,4.8vw,1.7rem);
-}
-}
 
 @media print{
 
