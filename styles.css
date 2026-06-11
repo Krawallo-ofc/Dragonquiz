@@ -284,6 +284,24 @@ break-inside:avoid;
 }
 
 .card.flipped .card-inner{
-transform:none;
+  transform:none !important;
+  -webkit-transform:none !important;
 }
+
+.card .front{
+  display:flex;
+}
+
+.card .back{
+  display:none;
+  transform:none !important;
+  -webkit-transform:none !important;
+}
+
+.card.flipped .front{
+  display:none;
+}
+
+.card.flipped .back{
+  display:flex;
 }
